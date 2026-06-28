@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio & Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Saru<span class="highlight"></span></div>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab(event, 'intro-tab')">Intro</button>
+            <button class="tab-btn" onclick="switchTab(event, 'game-tab')">My Game</button>
+        </div>
+    </nav>
+
+    <main id="intro-tab" class="tab-content active">
+        <header class="hero">
+            <h1>Hi, I'm an Undergrad Dev.</h1>
+            <p>Welcome to my corner of the internet. I build things with code.</p>
+        </header>
+
+        <section class="scroll-section">
+            <h2>About Me</h2>
+            <p>I am currently studying Computer Science, focusing on software development and interactive media. When I'm not studying for midterms, I'm usually prototyping new ideas.</p>
+            <div class="image-area">
+                [ Insert Profile or Setup Image Here ]
+            </div>
+        </section>
+        
+        <section class="scroll-section">
+            <h2>My Skills</h2>
+            <p>Here are a few things I've been working with recently:</p>
+            <p class="mono-text">> Python, JavaScript, C++, and Game Design.</p>
+        </section>
+
+        <section class="scroll-section" id="react-section">
+            <h2>React Widget</h2>
+            <div id="react-root"></div>
+        </section>
+    </main>
+
+    <main id="game-tab" class="tab-content" style="display: none;">
+        <header class="hero">
+            <h1>Project: Neon Abyss</h1>
+            <p>My upcoming indie game launch. Coming soon to PC.</p>
+        </header>
+
+        <section class="scroll-section">
+            <h2>Gameplay Features</h2>
+            <p>Experience fast-paced, pixel-perfect combat in a cyberpunk setting. I've been designing the core loop for the past three months.</p>
+            <div class="image-area">
+                [ Insert Game Screenshot Here ]
+            </div>
+        </section>
+
+        <section class="scroll-section">
+            <h2>Devlog Snippet</h2>
+            <p>A quick look under the hood at my player movement controller:</p>
+            <div class="code-block">
+// Working on the dash mechanic
+function applyDash(player) {
+    player.velocity.x += dashForce;
+    playAnimation('dash');
+}
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="main.jsx"></script>
+    <script src="script.js"></script>
+</body>
+</html>
